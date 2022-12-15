@@ -57,6 +57,9 @@ body {
 .btnChangeOnHover:focus {
   background-color: var(--blue-text);
   color: var(--footer-Studio-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btnChangeOnHover:visited {
@@ -199,6 +202,36 @@ body {
   padding-bottom: 94px;
 }
 
+.softText {
+  margin: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background-color: var(--body-font-color);
+  opacity: 80%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.textInSoftText {
+  display: block;
+  color: var(--footer-Studio-text-color);
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+}
+
+.listOfWorkPhotos .listItemProps {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+
 .photoGalleryOfCrue .listOfCruePhotos {
   display: flex;
   gap: 30px;
@@ -278,6 +311,21 @@ body {
 
 .navContainer {
   color: var(--body-font-color);
+}
+
+.listOfNavBtns .aLink {
+  position: relative;
+}
+
+.listOfNavBtns .actualContent::after {
+  content: "";
+  left: 0px;
+  width: 53px;
+  height: 4px;
+  transform: translateY(46px);
+  background-color: var(--blue-text);
+  border-radius: 2px;
+  position: absolute;
 }
 
 .navContainer .listOfNavBtns {
@@ -369,6 +417,9 @@ body {
 .footer .iconBackground:hover,
 .footer .iconBackground:focus {
   background-color: var(--blue-text);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -399,6 +450,41 @@ body {
   height: 54px;
   margin-bottom: 4px;
   padding: 0px;
+}
+
+.overlayBox {
+  overflow: hidden;
+  width: 370px;
+  height: 294px;
+  position: relative;
+}
+
+.overlayBox:hover .overlay {
+  transform: translateX(0);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay {
+  width: 370px;
+  height: 294px;
+  position: absolute;
+  background-color: var(--blue-text);
+  opacity: 0.9;
+  transform: translateX(-100%);
+  transition: transform 250ms ease;
+}
+
+.overlayText {
+  display: block;
+  color: var(--footer-Studio-text-color);
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 28px;
+  margin: 49px 45px 49px 24px;
 }
 
 .portfoliogalleryMenu {
@@ -444,6 +530,9 @@ body {
 .listOfCategoryBtns .btnChangeOnHover:hover,
 .listOfCategoryBtns .btnChangeOnHover:focus {
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line {
@@ -486,11 +575,17 @@ body {
 .photoGalleryOfCrue .iconBackground:hover,
 .photoGalleryOfCrue .iconBackground:focus {
   background-color: var(--blue-text);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .photoGalleryOfCrue .iconBackground:hover .svg,
 .photoGalleryOfCrue .iconBackground:focus .svg {
   fill: var(--footer-Studio-text-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ourCustomers {
@@ -520,4 +615,7 @@ body {
 .companyLogosContainer .listItemProps .svg:hover {
   fill: var(--blue-text);
   border-color: var(--blue-text);
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
