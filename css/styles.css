@@ -149,6 +149,7 @@ body {
 
 .aLink {
   text-decoration: none;
+  color: var(--body-font-color);
 }
 
 .headerLogoTextProps {
