@@ -45,6 +45,9 @@ body {
   color: var(--blue-text);
   opacity: 100%;
   fill: currentColor;
+  transition-property: color, fill, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btnChangeOnHover {
@@ -57,7 +60,7 @@ body {
 .btnChangeOnHover:focus {
   background-color: var(--blue-text);
   color: var(--footer-Studio-text-color);
-  transition-property: color;
+  transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -459,7 +462,9 @@ body {
   position: relative;
 }
 
-.overlayBox:hover .overlay {
+.portfolioGalleryFirstRow .listItemProps:hover .overlay,
+.portfolioGallerySecondRow .listItemProps:hover .overlay,
+.portfolioGalleryThirdRow .listItemProps:hover .overlay {
   transform: translateY(0);
   transition-property: transform;
   transition-duration: 250ms;
@@ -526,11 +531,18 @@ body {
   height: 404px;
 }
 
-.container .portfolioGalleryItems:hover,
+.container .portfolioGalleryItems:hover {
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .listOfCategoryBtns .btnChangeOnHover:hover,
 .listOfCategoryBtns .btnChangeOnHover:focus {
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
-  transition-property: box-shadow;
+  background-color: var(--blue-text);
+  transition-property: box-shadow, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
