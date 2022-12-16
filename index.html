@@ -60,7 +60,7 @@
               EFEKTYWNE ROZWIĄZANIA<br />
               DLA WASZEGO BIZNESU
             </h1>
-            <button type="button" class="btnChangeOnHover bigADBtn">Zamów usługe</button>
+            <button data-modal-open type="button" class="btnChangeOnHover bigADBtn">Zamów usługe</button>
           </div>
         </div>
       </section>
@@ -370,6 +370,11 @@
         </section>
       </div>
     </footer>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modalClose" data-modal-close><span>X</span></button>
+        </div>
+      </div>
     <script src="modal.js"></script>
   </body>
 </html>
