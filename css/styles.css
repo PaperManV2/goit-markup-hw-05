@@ -36,6 +36,12 @@ body {
   color: var(--footer-Studio-text-color);
 }
 
+.blueTextOnHover {
+  transition-property: color, fill, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .blueTextOnHover:visited {
   color: var(--body-font-color);
 }
@@ -45,24 +51,21 @@ body {
   color: var(--blue-text);
   opacity: 100%;
   fill: currentColor;
-  transition-property: color, fill, opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btnChangeOnHover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btnChangeOnHover:hover,
 .btnChangeOnHover:focus {
   background-color: var(--blue-text);
   color: var(--footer-Studio-text-color);
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btnChangeOnHover:visited {
@@ -140,9 +143,8 @@ body {
 }
 
 .portfolioGalleryItems {
-  border: 1px solid var(--portfolio-gallery-border-color);
   width: 370px;
-  height: 404;
+  height: 404px;
   display: flex;
   flex-direction: column;
 }
@@ -284,6 +286,7 @@ body {
   color: var(--gray-text);
   line-height: 1.88;
   text-align: center;
+  height: 110px;
 }
 
 .listItemProps .aLink {
@@ -412,6 +415,9 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .socialmedia .svg {
@@ -421,9 +427,6 @@ body {
 .footer .iconBackground:hover,
 .footer .iconBackground:focus {
   background-color: var(--blue-text);
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -530,22 +533,19 @@ body {
 .portfolioGalleryThirdRow .listItemProps .portfolioGalleryItems {
   width: 370px;
   height: 404px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container .portfolioGalleryItems:hover {
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .listOfCategoryBtns .btnChangeOnHover:hover,
 .listOfCategoryBtns .btnChangeOnHover:focus {
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
   background-color: var(--blue-text);
-  transition-property: box-shadow, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line {
@@ -558,12 +558,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  justify-content: center;
   padding-left: 24px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 322px;
-  height: 70px;
+  width: 344px;
+  height: 110px;
+  border: 1px solid var(--portfolio-gallery-border-color);
 }
 
 .photoGalleryOfCrue .socialmedia {
@@ -579,6 +578,9 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .photoGalleryOfCrue .iconBackground .svg {
@@ -588,9 +590,6 @@ body {
 .photoGalleryOfCrue .iconBackground:hover,
 .photoGalleryOfCrue .iconBackground:focus {
   background-color: var(--blue-text);
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .photoGalleryOfCrue .iconBackground:hover .svg,
@@ -622,15 +621,15 @@ body {
   border: solid 1px var(--social-media-color);
   border-radius: 4px;
   fill: var(--social-media-color);
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .companyLogosContainer .listItemProps .svg:focus,
 .companyLogosContainer .listItemProps .svg:hover {
   fill: var(--blue-text);
   border-color: var(--blue-text);
-  transition-property: fill, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
